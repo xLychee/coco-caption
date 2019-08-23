@@ -52,6 +52,7 @@ class PTBTokenizer:
         print tmp_file.name
 
         cmd.append(os.path.basename(tmp_file.name))
+        print "token 0"
         p_tokenizer = subprocess.Popen(cmd, cwd=path_to_jar_dirname, \
                 stdout=subprocess.PIPE)
         print "token 1"
