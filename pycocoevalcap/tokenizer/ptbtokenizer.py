@@ -40,7 +40,7 @@ class PTBTokenizer:
         # save sentences to temporary file
         # ======================================================
         #path_to_jar_dirname=os.path.dirname(os.path.abspath(__file__))
-        path_to_jar_dirname="/home/bibabo_walmart/workspace/coco-caption/pycocoevalcap/spice/lib/"
+        path_to_jar_dirname="/home/bibabo_walmart/workspace/coco-caption/pycocoevalcap/spice/lib"
         tmp_file = tempfile.NamedTemporaryFile(delete=False, dir=path_to_jar_dirname)
         tmp_file.write(sentences)
         tmp_file.close()
