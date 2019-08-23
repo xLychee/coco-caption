@@ -54,9 +54,9 @@ class PTBTokenizer:
 
         cmd.append(os.path.basename(tmp_file.name))
         print "token 0"
-        #p_tokenizer = subprocess.Popen(cmd, cwd=path_to_jar_dirname, \
-        #        stdout=subprocess.PIPE)
-        p_tokenizer = subprocess.Popen(cmd, stdout=subprocess.PIPE)
+        p_tokenizer = subprocess.Popen(cmd, cwd=path_to_jar_dirname, \
+                stdout=subprocess.PIPE)
+        #p_tokenizer = subprocess.Popen(cmd, stdout=subprocess.PIPE)
         print "token 1"
         token_lines = p_tokenizer.communicate(input=sentences.rstrip())[0]
         print "token 2"
