@@ -15,7 +15,7 @@ import tempfile
 import itertools
 
 # path to the stanford corenlp jar
-STANFORD_CORENLP_3_4_1_JAR = '/home/bibabo_walmart/workspace/coco-caption/pycocoevalcap/spice/lib/stanford-corenlp-3.6.0.jar'
+STANFORD_CORENLP_3_4_1_JAR = 'stanford-corenlp-3.6.0.jar'
 
 # punctuations to be removed from the sentences
 PUNCTUATIONS = ["''", "'", "``", "`", "-LRB-", "-RRB-", "-LCB-", "-RCB-", \
@@ -28,7 +28,7 @@ class PTBTokenizer:
         cmd = ['java', '-cp', STANFORD_CORENLP_3_4_1_JAR, \
                 'edu.stanford.nlp.process.PTBTokenizer', \
                 '-preserveLines', '-lowerCase']
-
+        print cmd
         # ======================================================
         # prepare data for PTB Tokenizer
         # ======================================================
@@ -47,6 +47,10 @@ class PTBTokenizer:
         # ======================================================
         # tokenize sentence
         # ======================================================
+        print cmd
+        print path_to_jar_dirname
+        print tmp_file.name
+
         cmd.append(os.path.basename(tmp_file.name))
         p_tokenizer = subprocess.Popen(cmd, cwd=path_to_jar_dirname, \
                 stdout=subprocess.PIPE)
