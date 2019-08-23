@@ -15,8 +15,8 @@ import tempfile
 import itertools
 
 # path to the stanford corenlp jar
-STANFORD_CORENLP_3_4_1_JAR = '/home/bibabo_walmart/workspace/coco-caption/pycocoevalcap/spice/lib/stanford-corenlp-3.6.0.jar'
-
+#STANFORD_CORENLP_3_4_1_JAR = '/home/bibabo_walmart/workspace/coco-caption/pycocoevalcap/spice/lib/stanford-corenlp-3.6.0.jar'
+STANFORD_CORENLP_3_4_1_JAR = 'stanford-corenlp-3.6.0.jar'
 # punctuations to be removed from the sentences
 PUNCTUATIONS = ["''", "'", "``", "`", "-LRB-", "-RRB-", "-LCB-", "-RCB-", \
         ".", "?", "!", ",", ":", "-", "--", "...", ";"] 
@@ -39,7 +39,8 @@ class PTBTokenizer:
         # ======================================================
         # save sentences to temporary file
         # ======================================================
-        path_to_jar_dirname=os.path.dirname(os.path.abspath(__file__))
+        #path_to_jar_dirname=os.path.dirname(os.path.abspath(__file__))
+        path_to_jar_dirname="/home/bibabo_walmart/workspace/coco-caption/pycocoevalcap/spice/lib/"
         tmp_file = tempfile.NamedTemporaryFile(delete=False, dir=path_to_jar_dirname)
         tmp_file.write(sentences)
         tmp_file.close()
