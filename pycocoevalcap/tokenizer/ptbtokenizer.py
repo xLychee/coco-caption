@@ -57,8 +57,8 @@ class PTBTokenizer:
         try: 
             p_tokenizer = subprocess.Popen(cmd, cwd=path_to_jar_dirname, \
                 stdout=subprocess.PIPE)
-        except e:
-            print(e)
+        except:
+            print "Unexpected error:", sys.exc_info()[0]
 
         #p_tokenizer = subprocess.Popen(cmd, stdout=subprocess.PIPE)
         print "token 1"
