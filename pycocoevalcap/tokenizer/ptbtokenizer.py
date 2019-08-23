@@ -15,7 +15,7 @@ import tempfile
 import itertools
 
 # path to the stanford corenlp jar
-STANFORD_CORENLP_3_4_1_JAR = 'stanford-corenlp-3.6.0.jar'
+STANFORD_CORENLP_3_4_1_JAR = '/home/bibabo_walmart/workspace/coco-caption/pycocoevalcap/spice/lib/stanford-corenlp-3.6.0.jar'
 
 # punctuations to be removed from the sentences
 PUNCTUATIONS = ["''", "'", "``", "`", "-LRB-", "-RRB-", "-LCB-", "-RCB-", \
